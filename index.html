@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Regenbogen</title>
+    <script src="script.js"></script>
+    <link  rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Farben</h1>
+   
+    <div class="text card red">FARBEN</div>
+    x o o = rot<br>
+    color 2 steigt bis x
+    
+    <div class="text card yellow">FARBEN</div>
+    x x o = gelb<br>
+    color 1 sinkt bis 0
+
+    <div class="text card green">FARBEN</div>
+    o x o = grün<br>
+    color 3 steigt bis x
+
+    <div class="text card turquoise">FARBEN</div>
+    o x x = tyrkis<br>
+    color 2 sinkt bis 0
+
+    <div class="text card blue">FARBEN</div>
+    o o x = blau<br>
+    color 1 steigt bis x
+
+    <div class="text card pink">FARBEN</div>
+    x o x = rosa<br>
+    color 3 singt bis 0
+
+    <h3>180 und 100</h3>
+    Anfangswert: 180 100 100<br>
+    Minimaler Wert: 100<br>
+    Maximaler Wert: 180<br>
+    Schrittweite: 80<br>
+    Anzahl an Schritten: 6<br>
+    Gesamtwert: 480<br>
+
+    <h3>Berechnung</h3>
+    Ergebnise werden in einem Array [] gespeichert<br>
+
+    <h4>Funktion 1</h4>
+    Schleife mit Anzahl der Buttons<br>
+    wert = (480 / Anzahl der Buttons) * i<br>
+    Funktion 2 mit wert<br>
+    i++<br>
+    Wenn Anzahl der Buttons > i, dann wiederholen
+
+    <h4>Funktion 2</h4>
+    Die Funktion nimmt den Wert und teilt ihn durch 80<br>
+    Gespeichert wird das Ergebnis und der Rest<br>
+    Das Ergebnis bestimmt welcher switch ausgeführt wird:
+    
+    <p>In jedem case ist der passende Startwert <br>
+    (o=100 x=180 $=neuer Wert) = RGB Wert (100 180 180)<br>
+    case1 (xoo) => (x$o) + rest<br>
+    case2 (xxo) => ($xo) - rest<br>
+    case3 (oxo) => (ox$) + rest<br>
+    case4 (oxx) => (o$x) - rest<br>
+    case5 (oox) => ($ox) + rest<br>
+    case6 (xox) => (xo$) - rest<br>
+    Der Rest bestimmt den Wert der zu verändernden ($) Zahl<br>
+    Der neue RGB-Wert wird im Array gepseichert</p>
+
+    <button onclick="createButtons()">Erstelle neue Buttons</button><br>
+<p>
+    <div id="navi"></div>
+</p>     
+     
+</body>
+</html>
