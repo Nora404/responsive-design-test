@@ -1,0 +1,15 @@
+.btn{
+    padding: 15px;
+    border-radius: 20px;
+    margin: 5px;
+    border: 5px double;
+}
+
+.text {
+    color: white;
+    font-weight: bold;
+}
+
+.brightness:hover {
+    filter: brightness(1.2);
+}
